@@ -1,6 +1,6 @@
 """Unit tests for the cleaning rules. Run: python test_pipeline.py   (also works with pytest)"""
 import numpy as np, pandas as pd
-import pipeline as P
+import Week_3.pipeline as P
 
 
 def test_money_and_na_parsing():
