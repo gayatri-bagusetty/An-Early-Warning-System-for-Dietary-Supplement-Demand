@@ -27,8 +27,8 @@ sns.set_theme(style="white", rc={"font.family": "DejaVu Sans", "font.size": 9, "
                                  "axes.titlesize": 10, "axes.titleweight": "regular", "axes.titlecolor": INK})
 R = {}   # results
 
-panel = pd.read_csv("processed/panel_monthly.csv", parse_dates=["month"]).sort_values(["Product Name", "month"]).reset_index(drop=True)
-weekly = pd.read_csv("processed/sales_clean_weekly.csv", parse_dates=["Date"])
+panel = pd.read_csv("../Week_3/processed/panel_monthly.csv", parse_dates=["month"]).sort_values(["Product Name", "month"]).reset_index(drop=True)
+weekly = pd.read_csv("../Week_3/processed/sales_clean_weekly.csv", parse_dates=["Date"])
 PRODUCTS = sorted(panel["Product Name"].unique())
 MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 

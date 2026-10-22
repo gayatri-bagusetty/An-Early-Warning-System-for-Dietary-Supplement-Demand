@@ -18,9 +18,9 @@ C1, C2, C3, C4 = "#2F6F6B", "#C8553D", "#8A94A6", "#E2A93B"
 sns.set_theme(style="white", rc={"font.family": "DejaVu Sans", "font.size": 9, "axes.edgecolor": GRID, "axes.labelcolor": INK,
                                  "xtick.color": MUTE, "ytick.color": MUTE, "axes.spines.top": False, "axes.spines.right": False,
                                  "axes.titlesize": 10, "axes.titleweight": "regular", "axes.titlecolor": INK})
-panel = pd.read_csv("processed/panel_monthly.csv", parse_dates=["month"]).sort_values(["Product Name", "month"]).reset_index(drop=True)
-weekly = pd.read_csv("processed/sales_clean_weekly.csv", parse_dates=["Date"])
-summ = json.load(open("processed/run_summary.json"))
+panel = pd.read_csv("../Week_3/processed/panel_monthly.csv", parse_dates=["month"]).sort_values(["Product Name", "month"]).reset_index(drop=True)
+weekly = pd.read_csv("../Week_3/processed/sales_clean_weekly.csv", parse_dates=["Date"])
+summ = json.load(open("../Week_3/processed/run_summary.json"))
 PRODUCTS = sorted(panel["Product Name"].unique()); MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 panel["upr"] = panel["units"] / panel["n_records"]
 R = {}

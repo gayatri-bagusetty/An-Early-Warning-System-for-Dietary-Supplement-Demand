@@ -14,8 +14,8 @@ from sklearn.model_selection import TimeSeriesSplit
 from sklearn.preprocessing import StandardScaler
 import features as F
 
-panel = pd.read_csv("processed/panel_monthly.csv", parse_dates=["month"])
-weekly = pd.read_csv("processed/sales_clean_weekly.csv", parse_dates=["Date"])
+panel = pd.read_csv("../Week_3/processed/panel_monthly.csv", parse_dates=["month"])
+weekly = pd.read_csv("../Week_3/processed/sales_clean_weekly.csv", parse_dates=["Date"])
 beh = F.monthly_behaviour(weekly)
 PRODUCTS = sorted(panel["Product Name"].unique())
 
