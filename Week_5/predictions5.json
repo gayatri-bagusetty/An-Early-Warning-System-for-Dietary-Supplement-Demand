@@ -1,0 +1,20 @@
+{
+ "written_before_running_models": true,
+ "basis": "Week 4 results (Ridge calendar+season MAPE 5.2-6.4%, seasonal naive 6.8-7.0%, last value 10.6-27.4%), Week 1 literature (Makridakis et al. 2018: ML not better on short monthly series), 8 products x 24-60 training months",
+ "regression_mape_pct_expected_range": {
+  "seasonal_profile_baseline": [5.5, 7.0],
+  "ridge_F2": [5.0, 6.5],
+  "ols_F2": [5.3, 7.5],
+  "decision_tree_depth4": [6.5, 9.0],
+  "random_forest_F2": [5.0, 6.8],
+  "gradient_boosting_F2": [5.0, 6.8],
+  "extras_F7_effect_on_any_model_pp": [-0.3, 0.3]
+ },
+ "claims": [
+  "No ML model beats Ridge F2 by more than 0.5 percentage points MAPE at any horizon.",
+  "A single decision tree is clearly worse than Ridge (>= 1 point).",
+  "Adding the extra feature groups (F7) does not help any algorithm by more than 0.3 points.",
+  "A pooled model beats one-model-per-product.",
+  "Surge classifier: precision and recall both between 0.70 and 0.92 for the best model; all models beat persistence."
+ ]
+}
